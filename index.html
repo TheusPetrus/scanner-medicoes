@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matheus Petrus | Portfólio</title>
+<meta name="description" content="Portfólio de Matheus Petrus: desenvolvimento de software, QA, Python e automação de processos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#04070D; --surface:#0A1A3A; --ink:#EAF0FA; --muted:#A3B3CF;
+  --line:#1D3466; --accent:#6EA8FF; --accent-ink:#04070D; --sun:#F2B705;
+  --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"DM Sans","Segoe UI",system-ui,sans-serif;
+}
+:root[data-theme="light"]{
+  --bg:#F3F6FB; --surface:#FFFFFF; --ink:#0A1A3A; --muted:#4A5B7A;
+  --line:#D3DBEA; --accent:#12307A; --accent-ink:#FFFFFF;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.6rem}
+.brand{font:700 1.1rem var(--head);text-decoration:none}
+nav{display:flex;gap:1.1rem;align-items:center;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--ink)}
+.theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:.3rem .8rem;font:500 .9rem var(--body);cursor:pointer}
+section{padding:4.5rem 0 1rem}
+h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0}
+h1{font-size:clamp(2.6rem,8vw,5.2rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:700;margin-bottom:1.4rem}
+h3{font-size:1.2rem;font-weight:700}
+.lead{max-width:38rem;color:var(--muted);font-size:1.2rem;margin:1.2rem 0 2rem}
+.hero{padding-top:4rem}
+.hero h1 span{display:block}
+.hero h1 .sub{color:var(--accent)}
+.ask{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.2rem;max-width:40rem}
+.ask p.q{margin:0 0 .7rem;color:var(--muted);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:.4rem .9rem;font:500 .95rem var(--body);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.answer{margin:1rem 0 0;min-height:4.8rem;border-left:4px solid var(--sun);padding-left:.9rem}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+@media(max-width:44rem){.cols{grid-template-columns:1fr}}
+.job{padding:0 0 1.2rem;margin:0 0 1.2rem;border-bottom:1px solid var(--line)}
+.job:last-child{border:0}
+.job .meta{color:var(--muted);font-size:.95rem;margin:.2rem 0 .5rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.2rem}
+.skill-group{border-top:3px solid var(--accent);padding-top:.7rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 0;padding:0;list-style:none}
+.tags li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:.15rem .6rem;font-size:.92rem}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:1.2rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.2rem;display:flex;flex-direction:column;gap:.7rem}
+.card p{margin:0;color:var(--muted)}
+.status{font-size:.85rem;font-weight:700;color:var(--muted)}
+.status.done{color:var(--accent)}
+.links{margin-top:auto;display:flex;gap:1rem;font-weight:700}
+.links a{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);border:0;border-radius:10px;padding:.7rem 1.2rem;font:700 1rem var(--body);text-decoration:none;cursor:pointer}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.row{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
+footer{margin-top:4rem;padding:1.5rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio">Matheus Petrus</a>
+    <nav aria-label="Principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+      <button class="theme" id="themeBtn" type="button" aria-label="Alternar tema claro e escuro">Tema</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="hero" id="inicio">
+  <h1><span>Desenvolvimento</span><span class="sub">+ QA.</span></h1>
+  <p class="lead">Estudante de Ciência da Computação em Lauro de Freitas (BA), com interesse em desenvolvimento de software e QA. Atuo com Python e automação de processos, unindo a experiência em administração e finanças a uma visão técnica.</p>
+  <div class="ask">
+    <p class="q">Escolha uma pergunta:</p>
+    <div class="chips" id="chips" role="group" aria-label="Perguntas sobre mim"></div>
+    <p class="answer" id="answer" aria-live="polite"></p>
+  </div>
+</section>
+
+<section id="sobre">
+  <h2>Sobre mim</h2>
+  <div class="cols">
+    <div>
+      <p>Cursando o 6º semestre de Ciência da Computação e tecnólogo em Administração (certificado previsto para dezembro), desenvolvo uma visão que une negócio e tecnologia: busco entender o problema antes de escrever a primeira linha de código.</p>
+      <p>Tenho paixão por tecnologia e por automatização de processos desde pequeno. Do ensino médio à faculdade, sempre procurei automatizar minhas próprias tarefas, e desse hábito nasceram meus projetos em Python.</p>
+      <p>Atualmente busco estágio em Desenvolvimento de Software e QA (Quality Assurance).</p>
+    </div>
+    <div>
+      <div class="job">
+        <h3>Desenvolvedor, Analista de TI e Suporte</h3>
+        <p class="meta">Projetos e freelance, 2 anos</p>
+        <p>Scripts e automações em JavaScript e Python, sites com HTML, CSS e JS, instalação de Windows e Linux. Monto e conserto computadores desde a infância e presto serviços freelancer de manutenção.</p>
+      </div>
+      <div class="job">
+        <h3>Jovem Aprendiz Administrativo e Financeiro</h3>
+        <p class="meta">2 anos</p>
+        <p>Conciliações, apoio ao fluxo de caixa, planilhas de controle gerencial e relatórios no Excel, organização de documentos fiscais.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="habilidades">
+  <h2>Habilidades</h2>
+  <div class="skills">
+    <div class="skill-group"><h3>Programação</h3>
+      <ul class="tags"><li>Python</li><li>JavaScript</li><li>HTML5</li><li>CSS3</li><li>Lógica de programação</li></ul></div>
+    <div class="skill-group"><h3>Suporte e infraestrutura</h3>
+      <ul class="tags"><li>Windows</li><li>Linux</li><li>Diagnóstico de hardware e software</li><li>Manutenção preventiva e corretiva</li><li>Conectividade e segurança</li></ul></div>
+    <div class="skill-group"><h3>Gestão e dados</h3>
+      <ul class="tags"><li>Excel avançado</li><li>Word avançado</li><li>Relatórios gerenciais</li><li>Automação de processos</li></ul></div>
+  </div>
+  <p style="color:var(--muted);margin-top:1.2rem">Certificações: Excel Avançado e Word Avançado (Fundação Bradesco).</p>
+</section>
+
+<section id="projetos">
+  <h2>Projetos</h2>
+  <div class="filters" id="filters" role="group" aria-label="Filtrar projetos"></div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="contato">
+  <h2>Vamos conversar</h2>
+  <p class="lead" style="margin-top:0">Estou à disposição para oportunidades de estágio em desenvolvimento e QA. Entre em contato ou conheça meu código no GitHub.</p>
+  <div class="row">
+    <a class="btn" href="mailto:theteusbr9@gmail.com">Enviar e-mail</a>
+    <button class="btn alt" id="copyBtn" type="button">Copiar e-mail</button>
+    <a class="btn alt" href="https://linkedin.com/in/matheus-petrus-b89909287" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn alt" href="https://github.com/TheusPetrus" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Matheus Petrus Eustaquio Araujo, Lauro de Freitas, BA</div>
+</footer>
+
+<script>
+/* ==========================================================
+   EDITE AQUI: seus projetos.
+   status: "Concluído" ou "Em andamento"
+   tags: use "IA", "Automação", "Dados" ou "Web" (ou crie novas)
+   Para colocar um link, preencha github e demo.
+   ========================================================== */
+const PROJECTS = [
+  {
+    titulo: "Scanner de imagens de medições de engenharia",
+    descricao: "Aplicação em Python que usa OCR (Tesseract) para ler imagens de medições, extrai coordenadas, data, horário e o nome de quem fez a foto, e preenche automaticamente uma planilha do Excel com pandas.",
+    tags: ["Automação", "Dados"],
+    status: "Concluído",
+    github: "", demo: ""
+  },
+  {
+    titulo: "Triagem de chamados de suporte",
+    descricao: "Classifica chamados por urgência e tipo de problema e sugere uma primeira resposta ao técnico.",
+    tags: ["IA", "Automação"],
+    status: "Planejado",
+    github: "", demo: ""
+  }
+];
+
+/* Perguntas e respostas do início da página. Troque os textos à vontade. */
+const QA = [
+  {q: "Quem é você?", a: "Sou Matheus Petrus, estudante de Ciência da Computação em Lauro de Freitas (BA). Tenho paixão por tecnologia e por transformar tarefas repetitivas em soluções automatizadas."},
+  {q: "O que você procura?", a: "Um estágio em Desenvolvimento de Software e QA, em que eu possa aprender com uma equipe e contribuir com entregas de qualidade."},
+  {q: "Com o que você trabalha?", a: "Com Python e JavaScript para programação, Windows e Linux para sistemas e Excel avançado para dados e relatórios."},
+  {q: "Por que Administração e TI?", a: "Atuei por 2 anos na área administrativa e financeira, o que me deu conhecimento de processos e de dados empresariais. Essa base me ajuda a criar soluções que resolvem problemas reais."}
+];
+
+/* ---------- Perguntas do início ---------- */
+const chips = document.getElementById("chips");
+const answer = document.getElementById("answer");
+function showAnswer(i){
+  answer.textContent = QA[i].a;
+  [...chips.children].forEach((c,j)=>c.setAttribute("aria-pressed", String(i===j)));
+}
+QA.forEach((item,i)=>{
+  const b = document.createElement("button");
+  b.className = "chip"; b.type = "button"; b.textContent = item.q;
+  b.setAttribute("aria-pressed","false");
+  b.addEventListener("click",()=>showAnswer(i));
+  chips.appendChild(b);
+});
+showAnswer(0);
+
+/* ---------- Projetos e filtros ---------- */
+const filters = document.getElementById("filters");
+const grid = document.getElementById("grid");
+const allTags = ["Todos", ...new Set(PROJECTS.flatMap(p=>p.tags))];
+let current = "Todos";
+
+function el(tag, props={}, kids=[]){
+  const e = document.createElement(tag);
+  Object.assign(e, props);
+  kids.forEach(k=>e.append(k));
+  return e;
+}
+function renderProjects(){
+  grid.replaceChildren();
+  const list = PROJECTS.filter(p=>current==="Todos" || p.tags.includes(current));
+  if(!list.length){ grid.append(el("p",{textContent:"Nenhum projeto nesta categoria ainda."})); return; }
+  list.forEach(p=>{
+    const links = el("div",{className:"links"});
+    if(p.github) links.append(el("a",{href:p.github,target:"_blank",rel:"noopener",textContent:"Código"}));
+    if(p.demo) links.append(el("a",{href:p.demo,target:"_blank",rel:"noopener",textContent:"Ver demo"}));
+    const card = el("article",{className:"card"},[
+      el("span",{className:"status"+(p.status==="Concluído"?" done":""),textContent:p.status}),
+      el("h3",{textContent:p.titulo}),
+      el("p",{textContent:p.descricao}),
+      el("ul",{className:"tags"},p.tags.map(t=>el("li",{textContent:t})))
+    ]);
+    if(links.children.length) card.append(links);
+    grid.append(card);
+  });
+}
+allTags.forEach(t=>{
+  const b = el("button",{className:"chip",type:"button",textContent:t});
+  b.setAttribute("aria-pressed", String(t===current));
+  b.addEventListener("click",()=>{
+    current = t;
+    [...filters.children].forEach(c=>c.setAttribute("aria-pressed", String(c.textContent===t)));
+    renderProjects();
+  });
+  filters.append(b);
+});
+renderProjects();
+
+/* ---------- Tema ---------- */
+const root = document.documentElement;
+document.getElementById("themeBtn").addEventListener("click",()=>{
+  root.dataset.theme = root.dataset.theme==="light" ? "dark" : "light";
+});
+
+/* ---------- Copiar e-mail ---------- */
+const copyBtn = document.getElementById("copyBtn");
+copyBtn.addEventListener("click", async ()=>{
+  try{
+    await navigator.clipboard.writeText("theteusbr9@gmail.com");
+    copyBtn.textContent = "E-mail copiado";
+  }catch(e){
+    copyBtn.textContent = "theteusbr9@gmail.com";
+  }
+  setTimeout(()=>copyBtn.textContent="Copiar e-mail",2500);
+});
+</script>
+</body>
+</html>
